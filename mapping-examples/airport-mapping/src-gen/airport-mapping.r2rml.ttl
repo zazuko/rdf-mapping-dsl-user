@@ -37,6 +37,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		rr:objectMap [
 			rr:column "airport öwnership" ;
 		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate ex:marker ;
+		rr:objectMap [
+			rr:constant "foobar" ;
+		];
 	]
 .
 <#CityMapping>

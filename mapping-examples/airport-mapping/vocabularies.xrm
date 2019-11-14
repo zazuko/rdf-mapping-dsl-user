@@ -38,4 +38,5 @@ vocabulary ex {
 	
 	properties
 		owner
+		marker
 }
