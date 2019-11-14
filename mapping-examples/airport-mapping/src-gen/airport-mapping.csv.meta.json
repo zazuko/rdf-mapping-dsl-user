@@ -1,0 +1,73 @@
+{
+	"@context": "http://www.w3.org/ns/csvw",
+	"tables": [
+		{
+			"url": "http://www.example.com/Airport.csv",
+			"tableSchema": {
+				"aboutUrl": "http://airport.example.com/{id}",
+				"columns": [
+					{
+						"virtual": true,
+						"propertyUrl": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+						"valueUrl": "http://vocab.org/transit/terms/Stop"
+					}
+					,
+					{
+						"propertyUrl": "http://vocab.org/transit/terms/route",
+						"datatype": "int",
+						"titles": "stop"
+					},
+					{
+						"propertyUrl": "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
+						"titles": "latitude"
+					},
+					{
+						"propertyUrl": "http://www.w3.org/2003/01/geo/wgs84_pos#long",
+						"titles": "longitude"
+					},
+					{
+						"propertyUrl": "https://schema.example.org/owner",
+						"titles": "airport öwnership"
+					},
+					{
+						"propertyUrl": "https://schema.example.org/marker",
+						"virtual": true,
+						"valueUrl": "foobar"
+					}
+					,
+					{
+						"suppressOutput": true,
+						"titles": "id"
+					}
+				] 
+			}
+		}
+		
+		,{
+			"url": "http://www.example.com/City.csv",
+			"tableSchema": {
+				"aboutUrl": "http://city.example.com/{continent}/{country}/{city}",
+				"columns": [
+					{
+						"virtual": true,
+						"propertyUrl": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+						"valueUrl": "https://schema.org/City"
+					}
+					,
+					{
+						"suppressOutput": true,
+						"titles": "continent"
+					},
+					{
+						"suppressOutput": true,
+						"titles": "country"
+					},
+					{
+						"suppressOutput": true,
+						"titles": "city"
+					}
+				] 
+			}
+		}
+	]
+}
