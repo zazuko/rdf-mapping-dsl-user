@@ -1,0 +1,12 @@
+datatypes xsd {
+	prefix "xsd:" "http://www.w3.org/2001/XMLSchema#"
+	int
+}
+
+vocabulary ex {
+	prefix "ex:" "http://example.org/"
+	
+	classes Department Site
+	
+	properties location siteName
+}

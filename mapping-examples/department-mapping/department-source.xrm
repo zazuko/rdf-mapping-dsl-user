@@ -1,0 +1,12 @@
+source-types {
+	csv referenceFormulation "ql:CSV"
+}
+
+logical-source Department {
+	type csv
+	source "DEPT"
+
+	referenceables
+		DEPTNO
+		LOC	
+}

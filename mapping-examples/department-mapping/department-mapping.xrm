@@ -1,0 +1,17 @@
+map DeptTriplesMap from Department {
+	subject template "department/{0}" with DEPTNO;
+	
+	types ex.Department;
+	
+	properties
+		ex.location parent for SiteTriplesMap 
+}
+
+map SiteTriplesMap from Department {
+	subject template "site/{0}" with LOC;
+	
+	types ex.Site;
+	
+	properties
+		ex.siteName from LOC;
+}
